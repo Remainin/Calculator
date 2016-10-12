@@ -22,6 +22,8 @@ class Poly //用于存储表达式
 
 //git test again
 
+//B2 test
+
 class f
 {
     static ArrayList <String> S_3 = new ArrayList <String>();
