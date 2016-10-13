@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="gbk">
+<?xml version="2.0" encoding="gbk">
 <projectDescription>
 <name>com.zhangmingshuai</name>
        <comment></comment>
@@ -13,6 +13,6 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.jdt.javanature</nature>
 	</natures>
 </projectDescription>
