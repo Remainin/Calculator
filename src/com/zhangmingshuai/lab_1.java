@@ -366,6 +366,22 @@ class f
 	}
 }
 
+class Set{  //用作输入数据的判断
+	public int SetNumber( String s){
+		if(s.startsWith("!simplify")){
+			return 1;
+		}
+		else if(s.startsWith("!d/d")) {	
+			return 2;
+		}
+		else if(s.startsWith("over")){
+			return 3;
+		} else{
+			return 4;
+		}
+	}
+}
+
 public class lab_1{
 	public static void main(String args[])
 	{
@@ -376,7 +392,9 @@ public class lab_1{
 		begin = df.format(new Date());
 		Date no = new Date();
 		long bb = no.getTime();
+		int JudgeNumber;
 		f F = new f();
+		Set J = new Set();
 		String a = in.nextLine();
 		if(!F.Judge(a))
 			System.out.println("输入不合法!");
@@ -386,17 +404,18 @@ public class lab_1{
 			while(true)
 			{
 				String b = in.nextLine();
-				if(b.startsWith("!simplify"))
+				JudgeNumber = J.SetNumber(b);
+				if(JudgeNumber == 1)
 				{	
 					if(!F.simplify(b))
 						System.out.println("输入不合法,重新输入");
 				}		
-				else if(b.startsWith("!d/d"))
+				else if(JudgeNumber == 2)
 				{	
 					if(!F.derivative(b))
 						System.out.println("输入不合法,重新输入");
 				}
-				else if(b.startsWith("over"))
+				else if(JudgeNumber == 3)
 					{
 					      end = df.format(new Date());
 					      Date en = new Date();
